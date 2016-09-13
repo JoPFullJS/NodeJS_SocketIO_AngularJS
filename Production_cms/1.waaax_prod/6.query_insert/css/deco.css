@@ -1,0 +1,45 @@
+.palette1, .palette2, .palette3, .palette4 {
+    height: 100px;
+    width: 100px;
+    color: #fff;
+    font-size: 0.9em;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+img {
+    width: auto;
+}
+span {
+    display: block;
+    margin-top: 10px;
+}
+.chx_color {
+    margin: auto;
+    height: 100px;
+    width: 55%;
+    margin-bottom: 20px;
+}
+#container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+#up_file{
+  margin-bottom: 20px;
+}
+#load_color{
+  margin-bottom: 20px;
+}
+#up_file,#load_color,.chx_color,.coverImage{
+  display: block;
+}
+#up_file,#load_color,.coverImage{
+  margin: auto;
+  margin-top:20px !important;
+}
+#load_color{
+  width:60%;
+  margin-bottom: 15px;
+}

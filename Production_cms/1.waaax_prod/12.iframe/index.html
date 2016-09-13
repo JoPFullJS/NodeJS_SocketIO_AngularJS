@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          var b = [
+            {'name' : 'template1'},
+            {'name' : 'template2'}
+          ];
+           var dominante = '#BCA900';
+           var moins = '#665558';
+           var inter = '#755633';
+           var second = '#998423';
+           var palette = [];
+
+           palette['dominante'] = dominante;
+           palette['moins'] = moins;
+           palette['inter'] = inter;
+           palette['second'] = second;
+
+
+            var color = {'dominante': "#000000", 'moins': "#785649", 'inter': "#558447", 'second': "#156678"};
+
+           console.log(palette);
+            //console.log(b);
+
+            for (var i in b) {
+                console.log(i);
+                $('#presentation').append('<li id="boxFrame" ><div><input type="radio" name="template" value="'+ b[i].name +'" /></div><div><iframe class="framet" src="http://localhost/production_cms/prod/template/original/'+ b[i].name +'/index.html?dominante='+ palette.dominante.substring(1) +'&moins='+ palette.moins.substring(1) +'&inter='+ palette.inter.substring(1) +'&second='+ palette.second.substring(1) +'" frameborder="0" allowfullscreen ></iframe></div></li>');
+            }
+
+        });
+    </script>
+</head>
+
+<body id="indframe">
+
+    <div style="height:100px; width:100px; color:#801515;"></div>
+
+    <button id="miseajour">mise a jour</button>
+
+
+    <input id="dominante" name="dominante" type="text" value="#801515">
+
+    <div>
+      <ul id="presentation"></ul>
+    </div>
+
+
+</body>
+
+</html>

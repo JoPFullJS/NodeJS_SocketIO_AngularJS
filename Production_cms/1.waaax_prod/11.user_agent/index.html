@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
+  <title>Test Presence absence de connexion sans session</title>
+</head>
+<body>
+  <div id="hello">Hello Word !</div>
+  <form id="cpForm" action="#" method="post">
+    <input type="text" name="pseudo">
+    <input type="text" name="mail">
+    <input type="submit" value="envoyer !">
+  </form>
+
+  <div id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti illum necessitatibus, tenetur soluta voluptas sint, nisi optio porro fugiat recusandae provident quidem magni, dolores beatae sit alias labore temporibus possimus!</div>
+
+
+  <script src="http://localhost:1337/socket.io/socket.io.js"></script>
+  <script src="js/client.js"></script>
+
+</body>
+</html>

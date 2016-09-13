@@ -1,0 +1,105 @@
+<section id="conexion" class="section wow fadeInUp">
+
+  <div class="container">
+    <div class="modal-content">
+    <div class="modal-body">
+    <h2>Connection</h2>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <!-- Working connect Form -->
+         <form  name="sentMessage" id="connectform" enctype="multipart/form-data"><!--novalidate : PAs de validation du formaulaire-->
+          <div class="row">
+            <div class="control-group form-group col-sm-6">
+              <div class="controls">
+                <label>Email</label>
+                <input type="email" class="form-control dark mail" name="mail" placeholder="Votre adresse mail" data-validation-required-message="Please enter your name."  required>
+                <p class="help-block" id="desk_mail"></p>
+              </div>
+            </div>
+            <div class="control-group form-group col-sm-6">
+              <div class="controls">
+                <label>Mot de passe</label>
+                <input type="password" class="form-control dark pwd" placeholder="Votre mot de passe" data-validation-required-message="Please enter your email address."required>
+                <p class="help-block" id="desk_pwd"></p>
+              </div>
+            </div>
+          </div>
+          <div id="success"></div>
+
+          <div class="padd-tb-10">
+            <button type="submit" class="btn btn-success btn-lg btn-block sub_cx">Submit</button>
+          </div>
+
+        </form>
+        <div class="clearfix"></div>
+        <!-- Working connect Form -->
+
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer id="footer">
+  <div class="container">
+    <ul class="list-inline">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-google"></i></a></li>
+    </ul>
+    <div class="copyright">&copy; 2016 Waaax | <a href="http://www.waaax" target="_blank">waaax.com</a></div>
+  </div>
+</footer>
+
+<!-- ./footer -->
+<script type="text/javascript">
+   $('.mail').keyup(function() {
+     var lg = $('.mail').val().length;
+        console.log(lg);
+        if(!$(".mail").val().match(/^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/)){
+
+          $('.sub_cx').attr('disabled','disabled');
+
+        }
+        else{
+
+          $('.sub_cx').removeAttr('disabled');
+
+        }
+   });
+
+   $('.pwd').keyup(function() {
+     var pwd = $('.pwd').val().length;
+
+     if(pwd < 5){
+       $('.sub_cx').attr('disabled','disabled');
+     }
+     else{
+       $('.sub_cx').removeAttr('disabled');
+     }
+   });
+
+   $("#connectform").submit(function(event){
+
+     event.preventDefault();
+     	$("input").each(function(){
+
+        if($(this).val() == ""){
+          $(this).removeAttr("value");
+					$(this).attr("placeholder","Veuillez remplir ce champ !");
+        }
+        else{
+
+          //On lance les sockets pour authentification coté server
+          console.log("Donnée a envoyer");
+
+        }
+
+      });
+
+   });
+</script>

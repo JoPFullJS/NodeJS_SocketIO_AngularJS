@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="fr" ng-app="fullPage">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Waaax - trouvez un transporteur</title>
+
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="css/font-awesome/font-awesome.min.css" rel="stylesheet">
+
+		<!-- Simple Line Icons -->
+		<link href="css/simple-line-icons/simple-line-icons.css" rel="stylesheet">
+
+		<!-- google font -->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+		<!-- owl-carousel -->
+		<link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+
+		<!-- magnific-popup -->
+		<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+		<!-- animate -->
+		<link href="css/animate/animate.css" rel="stylesheet">
+		<link href="css/colors/green.css" rel="stylesheet">
+
+		<!-- style -->
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/waaax.css" rel="stylesheet">
+
+		<!-- switcher -->
+		<link href="switcher/switcher.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="slider-background">
+
+		<video loop muted autoplay poster="img/img1.jpg" class="video-bg">
+			<source src="video/video-clip.mp4" type="video/mp4">
+		</video>
+
+		<!-- Preloader 	-->
+		<div id="preloader">
+			<div id="status">&nbsp;</div>
+		</div>
+		<!-- ./Preloader -->
+
+		<!-- pattern -->
+		<div id="bg_pattern"></div>
+		<!-- ./pattern -->
+
+		<!-- scrollToTop -->
+		<a href="#" class="scrollToTop">
+			<i class="fa fa-angle-up fa-2x"></i>
+		</a>
+		<!-- ./scrollToTop -->
+
+
+		<!-- header -->
+		<header id="header">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+			  <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="#/home">
+					Waaax<!--img src="img/logo.png" alt="logo"-->
+				  </a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="collapse-navbar">
+
+				  <ul class="nav navbar-nav navbar-right">
+					<li><a data-scroll href="#/envoie">Envoyer un bien</a></li>
+					<li><a data-scroll href="#/compte/transporteur" data-nav="transporteur">Je suis transporteur</a></li>
+					<li class="dropdown">
+						<a href="#/home" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Avantages
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a data-scroll href="#/avantagesclient">Avantages client</a></li>
+							<li><a data-scroll href="#/avantagestransporteur">Avantages transporteur</a></li>
+							<li><a data-scroll href="#/faq">FAQ</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a data-scroll href="#/ecologie" id="bg-eco">Ecologie</a></li>
+							<li><a data-scroll href="#/news">On parle de nous</a></li>
+						</ul>
+					</li>
+					<li><a data-scroll href="#/contact">Contact</a></li>
+					<li><a href="#/connexion" >Connection</a></li>
+					<li><a data-scroll href="#/nouveaucompte">Cr&eacute;er un compte</a></li>
+				  </ul>
+				</div><!-- /.navbar-collapse -->
+			  </div><!-- /.container -->
+			</nav>
+		</header>
+		<!-- ./header -->
+
+		<div ng-view></div>
+		<!-- envoi -->
+
+
+
+
+
+		<!-- menu droite -->
+		<div id="style-switcher">
+			<h2>Mon Compte<a href="#"><i class="fa fa-cog animated infinite swing"></i></a></h2>
+
+			<div>
+				<div id="cpClient">
+					<h3>Client </h3>
+					 <ul class="">
+						<li><a href="#/profile_client">G&eacute;rer mon profil</a></li>
+					</ul>
+				</div>
+				<div id="cpTransport">
+					<h3>Transporteur </h3>
+					 <ul class="">
+						<li><a  href="#/profile_transporteur">Gérer mon compte transporteur </a></li>
+						<li><a  href="#/gerer_site">G&eacute;rer mon site WEB </a></li>
+						<li><a  href="#/choix_dns">G&eacute;rer le nom du site WEB </a></li>
+					</ul>
+				</div>
+
+
+			</div>
+
+		</div>
+		<!-- ./menu droite -->
+		<!-- angular -->
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+
+    </script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+		<script type="text/javascript" src='app_angular.js'></script>
+
+		<!--Routing -->
+		<script type="text/javascript" src='routing.js'></script>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- smooth-scroll -->
+		 <script src="plugins/smooth-scroll/smooth-scroll.js"></script>
+
+		<!-- backstretch -->
+		<script src="plugins/backstretch/backstretch.min.js"></script>
+
+		<!-- owl-carousel -->
+		<script src="plugins/owl-carousel/owl.carousel.js"></script>
+
+		<!-- wow -->
+		<script src="plugins/wow/wow.js"></script>
+
+		<!-- typed -->
+		<script src="plugins/typed/typed.min.js"></script>
+
+		<!-- magnific-popup -->
+		<script src="plugins/magnific-popup/jquery.magnific-popup.js"></script>
+
+		<!-- jqBootstrapValidation -->
+		<script src="plugins/jqBootstrapValidation/jqBootstrapValidation.js"></script>
+
+		<!-- switcher -->
+		<script type="text/javascript" src="switcher/switcher.js"></script>
+
+		<!-- main js -->
+		<script src="js/main.js"></script>
+		<script src="js/waaax.js"></script>
+		<script src="http://localhost:443/socket.io/socket.io.js"></script>
+		<script src="js/client.js"></script>
+		<script type="text/javascript" src="js/quantize.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js"></script>
+		<script type="text/javascript" src="js/color-thief.js"></script>
+
+
+	</body>
+</html>

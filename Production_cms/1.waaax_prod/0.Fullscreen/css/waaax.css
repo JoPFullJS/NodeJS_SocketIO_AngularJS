@@ -1,0 +1,10 @@
+﻿
+
+.nav ul.dropdown-menu,
+.modal-content{
+    background-color: #101010;
+}
+
+.video-bg {
+	display:none;
+}

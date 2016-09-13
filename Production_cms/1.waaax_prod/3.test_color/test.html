@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="quantize.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js"></script>
+  <script type="text/javascript" src="color-thief.js"></script>
+  <script type="text/javascript" src="color-thief-fn.js"></script>
+  <title>Document</title>
+</head>
+<body>
+<style>
+  .palette1,.palette2,.palette3,.palette4,.palette5,.palette6,.palette7{
+    height: 100px;
+    width: auto;
+    color: #fff;
+    font-size: 4em;
+  }
+  img{
+    width: 10%;
+  }
+
+</style>
+<div>
+
+
+  <img src="img/color.png" alt="" class="coverImage1">
+  <img src="img/food.jpg" alt="" class="coverImage2">
+  <img src="img/people.jpg" alt="" class="coverImage3">
+  <img src="img/art.jpg" alt="" class="coverImage4">
+  <img src="img/2.jpg" alt="" class="coverImage5">
+
+</div>
+
+<div>
+  <input type="text" name="nombre">
+  <button onclick="colorChange();">nombre</button>
+</div>
+
+<div style="margin-top:20px;">
+  <div class="palette1">LA MOINS DOMINANTE</div>
+  <div class="palette2">COULEUR DOMINANTE</div>
+  <div class="palette3">COULEUR INTERMEDIAIRE</div>
+  <div class="palette7">COULEUR SECONDAIRE</div>
+</div>
+
+
+
+</body>
+</html>

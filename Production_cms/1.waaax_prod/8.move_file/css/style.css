@@ -1,0 +1,19 @@
+.boxFrame {
+    height: 0px;
+    width: 30%;
+    display: inline-block;
+    clear: both;
+}
+.framet {
+    overflow: hidden;
+    position: relative;
+    width: 1044px;
+    height: 800px;
+    -ms-zoom: 0.40;
+    -moz-transform: scale(0.40);
+    -moz-transform-origin: 0px 0;
+    -o-transform: scale(0.40);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.40);
+    -webkit-transform-origin: 0 0;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+
+	<title>Chat Node JS Test</title>
+	<meta name="description" content="" />
+
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div>
+		<header>
+			<h1>Node JS test Chat</h1>
+		</header>
+
+		<div>
+
+			<!-- formulaire de connection -->
+			<form action="" id="loginform">
+				<input type="text" name="username" id="username" placeholder="Nom d'utilisateur">
+				<input type="mail" name="mail" id="mail" placeholder="e-mail">
+				<input class="btn" type="submit" value="Se connecter">
+			</form>
+
+			<!--<div id ="welcome"><p>Bienvenue Proustibat !</p></div>-->
+
+			<!-- utilisateurs connectés -->
+			<div id="sidebar">
+				<div id="users">
+					<h1>Utilisateurs connectés</h1>
+
+				</div>
+			</div>
+
+			<!-- contenu du milieu -->
+			<div id="content">
+
+				<!-- formulaire pour poster un message -->
+				<form action="" id="form">
+					<input type="text" id="message" class="text" />
+					<input type="submit" id="send" value="Envoyer mon message !" class="submit" />
+				</form>
+
+				<!-- messages des utilisateurs -->
+				<div id="messages">
+					<div class="message" id="msgtpl" style="display: none;">
+						<img src="{{{user.avatar}}}">
+						<div class="info">
+							<p><strong>{{user.username}}</strong></p>
+							<p>{{message}}</p>
+							<span class="date">{{h}}:{{m}}</span>
+						</div>
+					</div>
+					<!--end of message-->
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+	<script src="js/mustache.js"></script>
+	<script src="http://localhost:1337/socket.io/socket.io.js"></script>
+	<script src="js/client.js"></script>
+</body>
+
+</html>

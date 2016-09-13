@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet/less" href="less/style.less">
+    <script type="text/javascript">
+        $(document).ready(function() {
+          
+        var socket = io.connect('http://localhost:1337');
+          var valeur;
+            $('#satis').change(function() {
+
+                valeur = $('#satis').val();
+
+                socket.emit('lighten',{
+                  lighten : valeur
+                })
+
+                socket.on('eclair', function(eclair){
+                  var light = eclair;
+
+                  less.modifyVars({
+                      '@light': light+'%'
+                  });
+                  less.refreshStyles();
+                })
+
+
+
+                console.log(valeur);
+
+            })
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.js"></script>
+    <script src="http://localhost:1337/socket.io/socket.io.js"></script>
+
+    <title>Test Less</title>
+</head>
+
+<body>
+
+
+    <div id="container">
+        <div id="color1" class="block"></div>
+        <div id="color2" class="block"></div>
+        <div id="color3" class="block"></div>
+        <div id="color4" class="block"></div>
+    </div>
+    <input type="range" id="satis" name="sat" min="0" max="60" value="30">
+</body>
+
+</html>

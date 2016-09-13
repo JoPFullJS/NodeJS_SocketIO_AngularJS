@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://localhost:443/socket.io/socket.io.js"></script>
+    <title>Test Upload</title>
+</head>
+
+<body>
+
+    <form id="form" enctype="multipart/form-data" method="post">
+        <input id="nameFile" type="text" name="title">
+        <br>
+        <input id="fslogo" type="file" name="upload" multiple="multiple">
+        <br>
+        <img id="logo" src="" width="400" alt="Image preview...">
+        <input type="hidden" name="extension">
+        <input type="hidden" name="dominante">
+        <input type="hidden" name="moins">
+        <input type="hidden" name="inter">
+        <input type="hidden" name="seconde">
+
+
+
+        <div style="margin:auto; height: 100px; width: 55%;">
+            <div class="palette1">Dominante- <span></span></div>
+            <div class="palette2">Dominante++ <span></span></div>
+            <div class="palette3">inter <span></span></div>
+            <div class="palette4">Second <span></span></div>
+        </div>
+
+        <div>
+          <ul id="presentation"></ul>
+        </div>
+
+
+         <input type="submit" value="Upload">
+
+    </form>
+
+    <style>
+        .palette1,
+        .palette2,
+        .palette3,
+        .palette4 {
+            height: 100px;
+            width: 100px;
+            color: #fff;
+            font-size: 0.9em;
+            float: left;
+            margin-left: 10px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        span {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+
+
+    <script type="text/javascript" src="js/quantize.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js"></script>
+    <script type="text/javascript" src="js/color-thief.js"></script>
+    <script type="text/javascript" src="js/client.js"></script>
+
+</body>
+
+</html>

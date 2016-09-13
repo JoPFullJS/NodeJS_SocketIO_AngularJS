@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="quantize.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js"></script>
+    <script type="text/javascript" src="color-thief.js"></script>
+    <script type="text/javascript" src="color-thief-fn.js"></script>
+    <script type="text/javascript" src="fs.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .palette1,
+        .palette2,
+        .palette3,
+        .palette4 {
+            height: 100px;
+            width: 100px;
+            color: #fff;
+            font-size: 0.9em;
+            float: left;
+           margin-left: 10px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        img {
+            width: auto;
+        }
+
+        span {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+    <div style="width:60%; margin:auto; text-align:center;">
+
+
+        <input type="file" onchange="previewFile()">
+        <br>
+        <br>
+        <img class="coverImage" src="" height="400" alt="Image preview...">
+        <br>
+        <br>
+        <button onclick="colorChange();">Load Color !</button>
+        <br>
+        <br>
+        <div style="margin:auto; height: 100px; width: 55%;">
+            <div class="palette1">Dominante- <span></span></div>
+            <div class="palette2">Dominante++ <span></span></div>
+            <div class="palette3">inter <span></span></div>
+            <div class="palette4">Second <span></span></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="quantize.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js"></script>
+    <link rel="stylesheet" href="deco.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+
+        <input id="up_file" type="file" onchange="previewFile();">
+
+        <img class="coverImage" src="" height="400" alt="Image preview...">
+
+        <button id="load_color" onclick="colorChange();">Load Color !</button>
+
+        <div class="chx_color" >
+            <div class="palette1">Dominante- <span></span></div>
+            <div class="palette2">Dominante++ <span></span></div>
+            <div class="palette3">inter <span></span></div>
+            <div class="palette4">Second <span></span></div>
+        </div>
+        <input name="dominante" type="hidden">
+        <input name="moins" type="hidden">
+        <input name="inter" type="hidden">
+        <input name="second" type="hidden">
+        <input id="savez" name="envoi" type="submit" value="Enregistrez !" onsubmit="envoi();">
+
+    </div>
+
+    <script type="text/javascript" src="color-thief.js"></script>
+    <script type="text/javascript" src="socket.io.js"></script>
+    <script type="text/javascript" src="client.js"></script>
+    <script type="text/javascript" src="preview.js"></script>
+</body>
+
+</html>

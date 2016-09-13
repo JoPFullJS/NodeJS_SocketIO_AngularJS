@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src='app.js'></script>
+    <!--Routing -->
+    <script type="text/javascript" src='routing.js'></script>
+
+    <!-- controller -->
+
+    <script type="text/javascript" src='src/controllers/categoryController.js'></script>
+    <script type="text/javascript" src='src/controllers/itemController.js'></script>
+
+    <!-- controller -->
+
+    <script type="text/javascript" src='src/directives/itemDecoratorDirective.js'></script>
+
+    <!-- Services -->
+
+    <script type="text/javascript" src='src/services/itemProvider.js'></script>
+    <script type="text/javascript" src='src/services/categoryProvider.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $("#appel").click(function(){
+          $(location).attr('href','#/items/new');
+        });
+
+      });
+    </script>
+
+
+    <title>Demo AngularJS</title>
+</head>
+
+<body ng-app="fullPage">
+  <nav>
+    <ul>
+      <li><a href="#/items">connexion</a></li>
+      <li><a href="#/items/new">couleur</a></li>
+    </ul>
+  </nav>
+  <button id="appel">lien JS</button>
+
+  <div ng-view></div>
+
+</body>
+
+</html>
